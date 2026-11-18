@@ -1,61 +1,44 @@
 # AQI Data Analysis System
 
-**Beginner-level B.Tech Mini Project**  
-**Submitted by:** Muthunarayan
+**Beginner-Level B.Tech Mini Project**  
+**Submitted by: Ansh Paliwal**
 
-## Overview
-This project demonstrates basic air-quality data analysis using Python, Pandas, NumPy and Matplotlib. It displays a sample dataset, checks missing values, cleans records, calculates AQI statistics, compares average AQI by city, assigns simple AQI categories, and creates charts.
-
-> **Data notice:** The values included in the code are illustrative sample values for learning. They are not live or official measurements and should not be used to describe actual city air quality. For a research or final hackathon submission, replace them with verified data and document the source, monitoring station, date range and download date.
+## Project overview
+This project demonstrates basic Air Quality Index (AQI) data analysis using only Python, Pandas and NumPy. It creates a small dataset, inspects and cleans records, calculates AQI statistics, compares average AQI by city, classifies readings and exports processed data to CSV.
 
 ## Technologies
 - Python
 - Pandas
 - NumPy
-- Matplotlib
+- Google Colab (to run the notebook)
 
-## Project files
-- `aqi_analysis.py` — main Python program
-- `README.md` — project description and run instructions
+## Files
+- `AQI_Data_Analysis_System_Ansh_Paliwal.ipynb` — Google Colab-compatible notebook.
+- `README.md` — project description and instructions.
 
 ## How to run
-1. Install Python 3.
-2. Install the required libraries:
-   ```bash
-   pip install pandas numpy matplotlib
-   ```
-3. Run the program:
-   ```bash
-   python aqi_analysis.py
-   ```
+1. Open [Google Colab](https://colab.research.google.com/).
+2. Select **File → Upload notebook**.
+3. Upload `AQI_Data_Analysis_System_Ansh_Paliwal.ipynb`.
+4. Run each cell from top to bottom.
+5. The final code cell creates `aqi_analysis_result.csv`. Download it from the Colab Files panel.
 
-The program creates:
-- `average_aqi_by_city.png`
-- `aqi_readings.png`
-- `aqi_analysis_result.csv`
+## Data notice
+The dataset contains illustrative sample values for learning. It is not live or official AQI data. Do not present the values as actual measurements. For real-world analysis, replace the sample values with verified readings and document the data source, monitoring station and date range.
 
-## Use your own dataset
-Replace the sample dictionary in `aqi_analysis.py` with a CSV import such as:
-
-```python
-df = pd.read_csv("your_aqi_data.csv")
-df["Date"] = pd.to_datetime(df["Date"])
-```
-
-The CSV should contain these columns: `City`, `Date`, `AQI`, `PM2.5`, and `PM10`.
-
-## AQI category bands used
-The example uses these simplified Indian AQI bands: Good (0–50), Satisfactory (51–100), Moderate (101–200), Poor (201–300), Very Poor (301–400), Severe (401–500). Confirm the applicable official standard and category calculation when working with real measurements.
-
-## Possible future improvements
-- Import verified live or historical data from an official source.
-- Compare more cities and monitoring stations.
-- Add pollutant-wise analysis and time-based trends.
-- Build an interactive dashboard.
+## Analysis performed
+1. Dataset creation and display.
+2. Dataset inspection (head, shape and data types).
+3. Missing-value and duplicate checks.
+4. Basic cleaning.
+5. Mean, maximum, minimum and standard deviation using NumPy.
+6. City-wise average AQI using Pandas.
+7. AQI category classification.
+8. Highest AQI record and category counts.
+9. CSV export.
 
 ## References
 - [Python documentation](https://docs.python.org/3/)
 - [Pandas documentation](https://pandas.pydata.org/docs/)
 - [NumPy documentation](https://numpy.org/doc/)
-- [Matplotlib documentation](https://matplotlib.org/stable/)
 - [Central Pollution Control Board (CPCB), India](https://cpcb.nic.in/)
